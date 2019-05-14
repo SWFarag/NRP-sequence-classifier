@@ -506,9 +506,9 @@ if __name__ == '__main__':
                         default=1,
                         help='determine which descriptor type to be used.',)
     parser.add_argument('-at', '--algorithm_Type',
-                        help='determine which machine learning algorithm.', default=all)
+                        help='determine which machine learning algorithm.', default="all")
     parser.add_argument('-sm', '--scoring_metric',
-                        help='determined the scoring metic e.g: balanced_accuracy, f1-score.', default=balanced_accuracy)
+                        help='determined the scoring metic e.g: balanced_accuracy, f1-score.', default="balanced_accuracy")
 
     if len(sys.argv) == 1:
         parser.print_help()
