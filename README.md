@@ -26,7 +26,7 @@ To run conventional machine learning models from the command-line, just do:
 
 Example: Running tool with replacement and with a particular genus
 
-    $ $ python deep_learning_models.py -in path_to/trainingset_sequences.csv -o path_to_output/outputFolderName/ -mt 0
+    $ python deep_learning_models.py -in path_to/trainingset_sequences.csv -o path_to_output/outputFolderName/ -mt 0
 
 To run deep learning models from the command-line, just do:
 
