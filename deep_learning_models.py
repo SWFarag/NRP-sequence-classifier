@@ -215,13 +215,13 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('-in','--in_df_path',
-                        help='Path of input file path.')
+                        help='Path of input file path.',  required=True, default=None)
     parser.add_argument('-o', '--out_df_path',
-                        help='Path to new .csv file for saving the potential peptide dataframe.')
+                        help='Path to new .csv file for saving the potential peptide dataframe.',  required=True, default=None)
     parser.add_argument('-ml', '--max_length', type=int,
-                        help='determine the maximum length of the input vector.')
+                        help='determine the maximum length of the input vector.',  required=True, default=None)
     parser.add_argument('-el', '--embedding_length', type=int,
-                        help='determine the length of the enbedding vector.')
+                        help='determine the length of the enbedding vector.',  required=True, default=None)
 
     if len(sys.argv) == 1:
         parser.print_help()

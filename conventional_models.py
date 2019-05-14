@@ -497,17 +497,18 @@ if __name__ == '__main__':
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('-in','--in_df_path',
-                        help='Path of input file path.')
+                        help='Path of input file path.',  required=True, default=None)
     parser.add_argument('-o', '--out_df_path',
-                        help='Path to new .csv file for saving the potential peptide dataframe.')
+                        help='Path to new .csv file for saving the potential peptide dataframe.',  required=True, default=None)
     parser.add_argument('-mt', '--model_Type', type=int,
-                        help='determine whether it is a continiuous or a classification model.')
+                        help='determine whether it is a continiuous or a classification model.',  required=True, default=None)
     parser.add_argument('-dt', '--descriptor_Type',
-                        help='determine which descriptor type to be used.')
+                        default=1,
+                        help='determine which descriptor type to be used.',)
     parser.add_argument('-at', '--algorithm_Type',
-                        help='determine which machine learning algorithm.')
+                        help='determine which machine learning algorithm.', default=all)
     parser.add_argument('-sm', '--scoring_metric',
-                        help='determined the scoring metic e.g: balanced_accuracy, f1-score.')
+                        help='determined the scoring metic e.g: balanced_accuracy, f1-score.', default=balanced_accuracy)
 
     if len(sys.argv) == 1:
         parser.print_help()
