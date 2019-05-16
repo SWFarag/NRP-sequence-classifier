@@ -400,7 +400,7 @@ class SequenceConvModelling:
         sns.set_context("paper",font_scale=1.6)
         sns.barplot(x="Model", y="AUC", data=res1, ax = ax[0,0])
         sns.barplot(x="Model", y=scoring_metric, data=res2, ax = ax[0,1])
-        fig.savefig(fname=self.out_df_path + "SB_models_performance_summary_both.png" , dpi=400 ,format="png")
+        fig.savefig(fname=self.out_df_path + "PB_models_performance_summary_both.png" , dpi=400 ,format="png")
         fig.clf()
         return res1, res2
 
@@ -412,7 +412,7 @@ class SequenceConvModelling:
         ax.set_title("AUC",fontsize=30)
         ax.figure.set_figheight(6)
         ax.figure.set_figwidth(8)
-        ax.figure.savefig(fname=self.out_df_path + "SB_models_performance_summary_AUC.png" , dpi=400 ,format="png")
+        ax.figure.savefig(fname=self.out_df_path + "PB_models_performance_summary_AUC.png" , dpi=400 ,format="png")
         ax.figure.clf()
         return res1
 
@@ -430,7 +430,7 @@ class SequenceConvModelling:
         ax.set_title(scoring_metric, fontsize=20)
         ax.figure.set_figheight(7)
         ax.figure.set_figwidth(10)
-        ax.figure.savefig(fname=self.out_df_path + "SB_models_performance_summary_" + scoring_metric +".png" , dpi=400 ,format="png")
+        ax.figure.savefig(fname=self.out_df_path + "PB_models_performance_summary_" + scoring_metric +".png" , dpi=400 ,format="png")
         #ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right")
         #plt.tight_layout()
         ax.figure.clf()
